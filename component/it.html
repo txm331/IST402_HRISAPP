@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+   <title>Employee Profile</title>
+
+</head>
+<body>
+   <table>
+      <tr>
+         {% for header in headings %}
+         <th>{{ header }}</th>
+         {% endfor %}
+      </tr>
+      {% for row in data %}
+      <tr class>
+         {% for cell in row %}
+         <td>{{ cell }}</td>
+         {% endfor %}
+      </tr>
+      {% endfor %}
+
+   </table>
+</body>
+
+
+</html>
+
+#test
