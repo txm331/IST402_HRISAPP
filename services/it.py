@@ -9,7 +9,7 @@ database_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 print(database_path)
 
 with open("{}/it.json".format(database_path), "r") as f:
-    acc = json.load(f)
+    usr = json.load(f)
 
 @app.route('/', methods=['GET'])
 def hello():
@@ -28,10 +28,10 @@ def it():
 def it_data(username):
     ''' Returns info about a specific user '''
 
-    if username not in acc:
+    if username not in usr:
         return "Not found"
 
-    return jsonify(acc[username])
+    return jsonify(usr[username])
 
 @app.route('/it/<username>/lists', methods=['GET'])
 def it_lists(username):
