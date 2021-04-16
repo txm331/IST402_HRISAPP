@@ -1,0 +1,27 @@
+{
+    "Tim": {
+        "accountID": 13456, 
+        "employeeName": "Tim",
+        "annualSalary": "$50,000",
+        "weeklyWage": "$1,000",
+        "401K": "5%",
+        "verified": 1
+        
+    },
+    "Daniel": {
+        "accountID": 23563,
+        "employeeName": "Daniel",
+        "annualSalary": "$50,000",
+        "weeklyWage": "$1,000",
+        "401k": "5%",
+        "verified": 1
+    },
+    "Enci": {
+        "accountID": 23563,
+        "employeeName": "Enci",
+        "annualSalary": "$50,000",
+        "weeklyWage": "$1,000",
+        "401k": "5%",
+        "verified": 0
+    }
+}
