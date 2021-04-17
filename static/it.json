@@ -4,7 +4,7 @@
     "employeeName": "Tim",
     "entryYear": "2021",
     "age": "20",
-    "department": "IT",
+    "department": "IT"
     
 },
 "Daniel": {
@@ -12,13 +12,13 @@
     "employeeName": "Daniel",
     "entryYear": "2021",
     "age": "20",
-    "department": "IT",
+    "department": "IT"
 },
 "Enci": {
     "employeeNumber": 23145, 
     "employeeName": "Enci",
     "entryYear": "2021",
     "age": "20",
-    "department": "IT",
+    "department": "IT"
 }
 }

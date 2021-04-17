@@ -1,0 +1,18 @@
+{
+    "Tim": {
+        "Task Assigned": "Estimate Budget", 
+        "Task Progress": "Completed",
+        "Task Due": "4/20/21"
+        
+    },
+    "Daniel": {
+        "Task Assigned": "Project Documentation", 
+        "Task Progress": "In Progress",
+        "Task Due": "4/20/21"
+    },
+    "Enci": {
+        "Task Assigned": "Web Page Design", 
+        "Task Progress": "In Progress",
+        "Task Due": "4/20/21"
+    }
+}
