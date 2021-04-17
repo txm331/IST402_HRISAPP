@@ -1,10 +1,10 @@
-from flask import Flask, jsonify, make_response
+from flask import Flask, jsonify, make_response, render_template
 import json
 import os
 import simplejson as json
 #projectmanagement
 app = Flask(__name__)
-
+#Testing!!!
 database_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 print(database_path)
 
