@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, make_response
+from flask import Flask, jsonify, make_response,render_template
 import json
 import os
 import simplejson as json
@@ -13,14 +13,12 @@ with open("{}/static/it.json".format(database_path), "r") as f:
 
 @app.route('/', methods=['GET'])
 def hello():
-    ''' Greet the user '''
-
-    return "Hey! The service is up, how about doing something useful"
+  return render_template('layout.html')
 
 @app.route('/it', methods=['GET'])
 def it():
     ''' Displays all the lists '''
-    resp = make_response(json.dumps(acc, sort_keys=True, indent=4))
+    resp = make_response(json.dumps(usr, sort_keys=True, indent=4))
     resp.headers['Content-Type']="application/json"
     return resp
 
