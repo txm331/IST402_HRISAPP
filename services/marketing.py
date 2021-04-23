@@ -1,31 +1,31 @@
-from flask import Flask, jsonify, make_response, render_template
+from flask import Flask, jsonify, make_response
 import json
 import os
 import simplejson as json
-#projectmanagement
+#marketing
 app = Flask(__name__)
-#Testing!!!
+
 database_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 print(database_path)
 
-with open("{}/static/projectmanagement.json".format(database_path), "r") as f:
+with open("{}/static/marketing.json".format(database_path), "r") as f:
     acc = json.load(f)
 
-@app.route("/tasktable.html")
+@app.route('/', methods=['GET'])
 def hello():
     ''' Greet the user '''
 
-    return render_template("tasktable.html")
+    return "Hey! The service is up, how about doing something useful"
 
-@app.route('/projectmanagement', methods=['GET'])
-def projectmangement():
+@app.route('/marketing', methods=['GET'])
+def marketing():
     ''' Displays all the lists '''
     resp = make_response(json.dumps(acc, sort_keys=True, indent=4))
     resp.headers['Content-Type']="application/json"
     return resp
 
-@app.route('/projectmanagement/<username>', methods=['GET'])
-def projectmangement_data(username):
+@app.route('/marketing/<username>', methods=['GET'])
+def marketing_data(username):
     ''' Returns info about a specific user '''
 
     if username not in acc:
@@ -33,8 +33,8 @@ def projectmangement_data(username):
 
     return jsonify(acc[username])
 
-@app.route('/projectmanagement/<username>/lists', methods=['GET'])
-def projectmangement_lists(username):
+@app.route('/marketing/<username>/lists', methods=['GET'])
+def marketing_lists(username):
     ''' Get lists based on username '''
 
     try:
@@ -43,10 +43,5 @@ def projectmangement_lists(username):
         return "Service unavailable"
     return req.text
 
-
-@app.route("/")
-def tasktable():
-    return render_template("tasktable.html")
-
 if __name__ == '__main__':
-    app.run(port=5003, debug=True)
+    app.run(port=5005, debug=True)
