@@ -1,0 +1,26 @@
+{
+    "Tim": {
+        "salesleadID": 14786, 
+        "salesleadName": "Tim",
+        "companyName": "Penn State",
+        "email": "txm331@psu.edu",
+        
+        "verified": 1
+        
+    },
+    "Daniel": {
+        "salesleadID": 14786, 
+        "salesleadName": "Daniel",
+        "companyName": "Penn State",
+        "email": "dan@psu.edu",
+        
+        "verified": 1
+    },
+    "Enci": {
+        "salesleadID": 14786, 
+        "salesleadName": "Enci",
+        "companyName": "Penn State",
+        "email": "enci@psu.edu",
+        "verified": 0
+    }
+}
