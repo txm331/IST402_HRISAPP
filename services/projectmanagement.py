@@ -11,7 +11,7 @@ print(database_path)
 with open("{}/static/projectmanagement.json".format(database_path), "r") as f:
     acc = json.load(f)
 
-@app.route("/tasktable.html")
+@app.route("/")
 def hello():
     ''' Greet the user '''
 
@@ -22,7 +22,7 @@ def projectmangement():
     ''' Displays all the lists '''
     resp = make_response(json.dumps(acc, sort_keys=True, indent=4))
     resp.headers['Content-Type']="application/json"
-    return resp
+    return render_template("projectmanagement.html")
 
 @app.route('/projectmanagement/<username>', methods=['GET'])
 def projectmangement_data(username):
