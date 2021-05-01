@@ -2,30 +2,97 @@
 <html lang="en">
 
 <head>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-   <title>Employee Profile</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Project Management</title>
+    
 
+    <style>
+        body{
+            background-image: url("https://www.lashgroup.com/-/media/assets/amerisourcebergen/01-home-page-new-images/ab_2_3_card_02.png");
+            background-size:cover;
+            
+        }
+        table.data{
+            background-color:aliceblue;
+            margin-left: -10%;
+            padding-left: 50%;
+            padding-right: 50%;
+            
+            
+            
+            
+        }
+        h1 {
+            color:#DF52DB;
+            text-align: center;
+        }
+        p.welcome{
+            background-color: aliceblue;
+            background-size: cover;
+            padding: 2%;
+            text-align: center;
+            margin-left: -10%;
+            margin-right: -10%;
+        }
+        a {
+            
+            color: black;
+            margin-left: 20%;
+            margin-right: 20%;
+            
+        }
+        div.services {
+            background-color: aliceblue;
+            padding: 5%;
+            margin-left: -10%;
+            margin-right: -10%;
+            
+        }
+    </style>
 </head>
-<body> 
-   <table>
-      <tr>
-         {% for header in headings %}
-         <th>{{ header }}</th>
-         {% endfor %}
-      </tr>
-      {% for row in data %}
-      <tr class>
-         {% for cell in row %}
-         <td>{{ cell }}</td>
-         {% endfor %}
-      </tr>
-      {% endfor %}
+<body>
+    
+<h1>Welcome To IT!</h1>   
+<p class="p welcome">This is the IT page, you can find your information below:</p> 
+<h1>IT Department Employees Profile</h1>
+<table class="table data">
+    <tr>
+        <th>Employee# </th>
+        <th>Employee Name </th>
+        <th>Entry Year </th>
+        <th>Age </th>
+        <th>Department </th>
+    </tr>
+    <tr>
+        <td>23434</td>
+        <td>Tim McCreesh</td>
+        <td>2021</td>
+        <td>20</td>
+        <td>IT</td>
+    </tr>
+    <tr>
+        <td>23145</td>
+        <td>Enci Zou</td>
+        <td>2021</td>
+        <td>20</td>
+        <td>IT</td>
+    </tr>
+    <tr>
+        <td>34343</td>
+        <td>Daniel Chao</td>
+        <td>2021</td>
+        <td>20</td>
+        <td>IT</td>
+    </tr>
+    
+</table>
 
-   </table>
+<h1>Other Services</h1>
+<div class="div services">
+<a href="http://127.0.0.1:5000/accounting">Accounting</a>
+<a href="http://127.0.0.1:5003/projectmanagement">Project Management</a>
+<a href="http://127.0.0.1:5005/marketing">Marketing</a>
+<a href="http://127.0.0.1:5004/sales">Sales</a>
+</div>
 </body>
-
-
-</html>
-
-#test
