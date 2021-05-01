@@ -20,7 +20,7 @@ def it():
     ''' Displays all the lists '''
     resp = make_response(json.dumps(usr, sort_keys=True, indent=4))
     resp.headers['Content-Type']="application/json"
-    return resp
+    return render_template('it.html')
 
 @app.route('/it/<username>', methods=['GET'])
 def it_data(username):
